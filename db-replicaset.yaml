@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: db-replicaset
+  labels:
+    app: db
+    owner: Edilton
+    project: IT_Talent_Hackathon4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db
+  template:
+    metadata:
+      labels:
+        app: db
+        owner: Edilton
+        project: IT_Talent_Hackathon4
+    spec:
+      containers:
+      - name: db-container
+        image: moisesalc/banco-it_talent:latest
+        ports:
+        - containerPort: 5432
+        env:
+        - name: AUTHOR
+          value: "Edilton"
+        - name: PROJECT
+          value: "IT_Talent_Hackathon4"

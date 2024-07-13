@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: backend-replicaset
+  labels:
+    app: backend
+    owner: Edilton
+    project: "IT_Talent_Hackathon4"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+        owner: Edilton
+        project: "IT_Talent_Hackathon4"
+    spec:
+      containers:
+      - name: backend-container
+        image: moisesalc/backend-it_talent:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: AUTHOR
+          value: "Edilton"
+        - name: PROJECT
+          value: "IT_Talent_Hackathon4"
