@@ -11,20 +11,9 @@ variable "instance_type" {
 }
 
 
-variable "aws_access_key" {
-  description = "Identificador da chave de acesso"
-  type        = string
-  default   = "AKIAUHKLI6DOEVC7KIHZ"
-}
-
-variable "aws_secret_key" {
-  description = "Identificador da secret"
-  type        = string
-  sensitive   = true
-}
-
 variable "ami_id" {
   description = "Identificador da AMI"
   type        = string
-  default     = "ami-06c68f701d8090592"
+  default     = "ami-0b72821e2f351e396"
 }
+
