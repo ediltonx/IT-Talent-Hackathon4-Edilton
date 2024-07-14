@@ -47,7 +47,7 @@ resource "aws_instance" "my_ec2" {
   ami           = var.ami_id
   instance_type = var.instance_type
   subnet_id     = aws_subnet.my_subnet.id
-  security_groups = [aws_security_group.my_sg.name]
+  security_groups = [aws_security_group.my_sg.id]
 
   tags = {
     Name = "Hacka4"
