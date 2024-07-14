@@ -14,7 +14,7 @@ variable "instance_type" {
 variable "aws_access_key" {
   description = "Identificador da chave de acesso"
   type        = string
-  sensitive   = true
+  default   = "AKIAUHKLI6DOEVC7KIHZ"
 }
 
 variable "aws_secret_key" {
