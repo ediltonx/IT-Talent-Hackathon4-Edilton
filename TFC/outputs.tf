@@ -7,3 +7,11 @@ output "public_ip" {
   description = "ip publico da instancia"
   value       = aws_instance.example.public_ip
 }
+
+output "instance_ami" {
+    value = "aws_instance.web.ami"
+}
+
+output "instance_arn" {
+    value = "aws_instance.web.arn"
+}
